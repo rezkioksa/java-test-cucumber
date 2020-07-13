@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {
                 "pretty:target/prettyReport.txt", "html:target/cucumber", "json:target/cucumber.json", "rerun:target/rerun.txt",
                 "junit:target/junit-report.xml" },
-        monochrome=true, tags = {"@shipping"})
+        monochrome=true)
 public class CucumberRunner {
 }
 
