@@ -1,7 +1,19 @@
-Feature: Shopping Cart summary page verification
-  Scenario: Verify values on shopping cart summary page
-    When I open "midtransUrl" page
-    And I buy and checkout the pillow
-#    And I sign in
-#    And I select a dress and proceed to checkout
-#    Then I verify details on shoppingCart summary page
+Feature: Purchasing Pillow Using Credit Card As Payment Method
+
+#  Scenario: Purchase Using Correct Credit Card
+#    When I open "midtransUrl" page
+#    And I buy and checkout the pillow
+#    And I check Order Summary
+#    And I select "creditCard" payment method
+#    And I verify payment checkout with "creditCardNumberTrue" credit card number
+#    And I verify the summary payment
+
+#  Completed
+#  Scenario: Purchase Using Wrong Credit Card
+#    When I open "midtransUrl" page
+#    And I buy and checkout the pillow
+#    And I check Order Summary
+#    And I select "creditCard" payment method
+#    And I verify payment checkout with "creditcardNumberFalse" credit card number
+#    And I verify the summary payment
+#    Then the transaction should be "failedStatus"
