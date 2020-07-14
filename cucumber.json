@@ -1,1 +1,292 @@
-[]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5730527444,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Purchase Using Correct Credit Card",
+        "description": "",
+        "id": "purchasing-pillow-using-credit-card-as-payment-method;purchase-using-correct-credit-card",
+        "after": [
+          {
+            "result": {
+              "duration": 599811408,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2830462114,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open \"midtransUrl\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "midtransUrl",
+                  "offset": 8
+                }
+              ],
+              "location": "DashboardSteps.iOpenPage(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1392396359,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I buy and checkout the pillow",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iBuyAndCheckoutThePillow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2036993250,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I check Order Summary",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iCheckOrderSummary()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 824396131,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I select \"creditCard\" payment method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "creditCard",
+                  "offset": 10
+                }
+              ],
+              "location": "ShoppingCartSummarySteps.iSelectPaymentMethod(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10295656382,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify payment checkout with \"creditCardNumberTrue\" credit card number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "creditCardNumberTrue",
+                  "offset": 32
+                }
+              ],
+              "location": "ShoppingCartSummarySteps.iVerifyPaymentCheckoutWithCreditCardNumber(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10974423336,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify the summary payment",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iVerifyTheSummaryPayment()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@correctCreditCard"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 12,
+            "value": "#  Completed"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 2992359020,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Purchase Using Wrong Credit Card",
+        "description": "",
+        "id": "purchasing-pillow-using-credit-card-as-payment-method;purchase-using-wrong-credit-card",
+        "after": [
+          {
+            "result": {
+              "duration": 605925030,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1318285918,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I open \"midtransUrl\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "midtransUrl",
+                  "offset": 8
+                }
+              ],
+              "location": "DashboardSteps.iOpenPage(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6502471634,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I buy and checkout the pillow",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iBuyAndCheckoutThePillow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4067191284,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I check Order Summary",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iCheckOrderSummary()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 971697442,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I select \"creditCard\" payment method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "creditCard",
+                  "offset": 10
+                }
+              ],
+              "location": "ShoppingCartSummarySteps.iSelectPaymentMethod(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3338092149,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I verify payment checkout with \"creditcardNumberFalse\" credit card number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "creditcardNumberFalse",
+                  "offset": 32
+                }
+              ],
+              "location": "ShoppingCartSummarySteps.iVerifyPaymentCheckoutWithCreditCardNumber(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11917262831,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I verify the summary payment",
+            "match": {
+              "location": "ShoppingCartSummarySteps.iVerifyTheSummaryPayment()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39397813,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the transaction should be \"failedStatus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "failedStatus",
+                  "offset": 27
+                }
+              ],
+              "location": "ShoppingCartSummarySteps.theTransactionShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@wrongCreditCard"
+          }
+        ]
+      }
+    ],
+    "name": "Purchasing Pillow Using Credit Card As Payment Method",
+    "description": "",
+    "id": "purchasing-pillow-using-credit-card-as-payment-method",
+    "keyword": "Feature",
+    "uri": "features/ShoppingCartSummary.feature"
+  }
+]

@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import helpers.DriverHelper;
 
 public class Hooks{
     public static WebDriver driver;
@@ -20,8 +21,10 @@ public class Hooks{
     @Before
     public void openBrowser() throws MalformedURLException {
         System.out.println("Called openBrowser");
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/driver/chromedriver");
-        driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/driver/chromedriver");
+//        driver = new ChromeDriver();
+        String key = System.getProperty("browser", "");
+        driver = DriverHelper.SetBrowserDriver(key);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
