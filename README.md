@@ -54,7 +54,7 @@
 
 #### With IDE (JUnit):
 ```
-run CucumberRunner class
+run step_definitions.CucumberRunner class
 ```
 ```
 or run .feature file / directory with .feature files / scenario in .feature file
@@ -62,5 +62,5 @@ or run .feature file / directory with .feature files / scenario in .feature file
 
 ### Reports and screenshots
 Reports are placed in 'target' directory, including screenshots of failed scenarios.
-To run report in browser, open 'target\html\index.html' file and choose browser.
+To run report in browser, open 'target\cucumber\index.html' file and choose browser.
 
