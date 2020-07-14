@@ -8,10 +8,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "classpath:features",
-		plugin = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"},
-		tags = {}
-		)
-public class RunCukesTest{
-	
+		glue={"step_definitions"},
+		features="src/test/resources/features",
+		plugin = {
+				"pretty:target/prettyReport.txt", "html:target/cucumber", "json:target/cucumber.json", "rerun:target/rerun.txt",
+				"junit:target/junit-report.xml" },
+		monochrome=true)
+public class RunCukesTest {
 }

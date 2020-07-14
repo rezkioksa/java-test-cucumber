@@ -11,6 +11,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class DataHelper {
 
 	public static HashMap<String,String> storeValues = new HashMap();
@@ -59,6 +63,20 @@ public class DataHelper {
 		
 		return mydata;
 
+	}
+
+	public static String getPropertiesData(String key){
+		String result= "";
+		try (InputStream input = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/testData/TestData.properties")) {
+			Properties prop = new Properties();
+			prop.load(input);
+//			System.out.println(prop.getProperty(key));
+			result = prop.getProperty(key);
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		return result;
 	}
 
 }
