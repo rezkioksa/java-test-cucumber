@@ -11,6 +11,12 @@
 * chromedriver.exe (driver folder (under resources))- chrome is set as default browser
 * geckodriver.exe (driver folder (under resources))
 
+###### Note: Please change your driver with the compatible version of your browser if the test can't open your browser.
+
+
+
+
+
 ### Initial
 * clone repository
 

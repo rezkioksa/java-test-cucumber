@@ -29,7 +29,13 @@ public class VerifyCartCheckoutSummaryAction {
         assertTrue(DashboardPage.CheckoutModalPage.customer_address_field.getAttribute("value") != null);
         assertTrue(DashboardPage.CheckoutModalPage.customer_postal_code_field.getAttribute("value") != null);
         DashboardPage.CheckoutModalPage.cart_button.get(0).click();
-        Reporter.log("Shopping Cart Summary action verify and proceed successful");
+        Reporter.log("Successfully click buy and checkout button");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void VerifyOrderSummary(WebDriver driver) {
@@ -51,6 +57,11 @@ public class VerifyCartCheckoutSummaryAction {
         assertTrue(CheckoutSummaryPaymentModalPage.OrderSummary.shipping_address.getText() != null);
 
         CheckoutSummaryPaymentModalPage.OrderSummary.continue_button.click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
     }
@@ -63,6 +74,11 @@ public class VerifyCartCheckoutSummaryAction {
         String payment = DataHelper.getPropertiesData(paymentMethod);
         WebElement selectedPayment = driver.findElement(By.xpath("//*[text()='" + payment + "']"));
         selectedPayment.click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -83,9 +99,12 @@ public class VerifyCartCheckoutSummaryAction {
         assertTrue(CheckoutSummaryPaymentModalPage.CreditCardPayment.email_field.getAttribute("placeholder") != null);
         assertTrue(CheckoutSummaryPaymentModalPage.CreditCardPayment.phone_number_field.getAttribute("placeholder") != null);
 
-//        CheckoutSummaryPaymentModalPage.CreditCardPayment.pay_now_button.click();
-
         actions.moveToElement(CheckoutSummaryPaymentModalPage.CreditCardPayment.pay_now_button).click().build().perform();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -112,27 +131,6 @@ public class VerifyCartCheckoutSummaryAction {
         CheckoutSummaryPaymentModalPage.SummaryPayment.ok_button.click();
 
     }
-
-//    public static void VerifySummaryPaymentIsNotExist(WebDriver driver) {
-//        assertTrue(CheckoutSummaryPaymentModalPage.CreditCardPayment.card_number_error.isDisplayed());
-//
-//        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='application']/div[3]/div/div/div/iframe")));
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assertTrue(CheckoutSummaryPaymentModalPage.SummaryPayment.merchant_name == null);
-//        assertTrue(CheckoutSummaryPaymentModalPage.SummaryPayment.amount == null);
-//        assertTrue(CheckoutSummaryPaymentModalPage.SummaryPayment.transaction_time == null);
-//        assertTrue(CheckoutSummaryPaymentModalPage.SummaryPayment.card_number == null);
-//        assertTrue(CheckoutSummaryPaymentModalPage.SummaryPayment.password == null);
-//
-//
-//
-//
-//    }
 
     public static void VerifyTransactionStatus(WebDriver driver, String status){
         try {

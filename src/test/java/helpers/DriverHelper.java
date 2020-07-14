@@ -19,7 +19,7 @@ public class DriverHelper {
                 System.out.println("Chrome Browser");
                 break;
             case ("firefox"):
-                System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/driver/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/driver/geckodriver");
                 driver = new FirefoxDriver();
                 System.out.println("Firefox Browser");
 

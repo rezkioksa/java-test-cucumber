@@ -54,12 +54,8 @@ public class DashboardPage extends BaseClass {
         @FindBy(how=How.XPATH, using="//*[@id='container']/div/div/div[2]/div[1]/div[4]/table/tbody/tr[6]/td[2]/input")
         public static WebElement customer_postal_code_field;
 
-
         @FindAll({@FindBy(how=How.CLASS_NAME, using="cart-checkout")})
         public static List<WebElement> cart_button;
-
-
-
 
 
     }
